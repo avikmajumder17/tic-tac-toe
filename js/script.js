@@ -23,7 +23,7 @@ const checkWinner = () => {
         [0, 1, 2, 5, 5, 0],
         [3, 4, 5, 5, 15, 0],
         [6, 7, 8, 5, 25, 0],
-        [0, 3, 6, 5, 15, 90],
+        [0, 3, 6, -5, 15, 90],
         [1, 4, 7, 5, 15, 90],
         [2, 5, 8, 15, 15, 90],
         [0, 4, 8, 5, 15, 45],
@@ -92,4 +92,5 @@ const reset = () => {
 
     gameOverImage[0].style.width = "0";
     document.querySelector(".gameover-line").style.width = `0`;
+    document.querySelector(".gameover-line").style.transform = `translate(0vw, 0vw) rotate(0deg)`;
 };

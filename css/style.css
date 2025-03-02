@@ -6,6 +6,12 @@
   font-family: "Comic Neue", cursive;
 }
 
+body {
+  background: url("../assets/bgimage.webp") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 .btn-main {
   padding: 0.8rem 2rem;
   font-size: 1.4rem;
@@ -27,12 +33,18 @@
 }
 .game-wrapper .game-container .game-left-wrapper {
   position: relative;
+  background: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(0.1rem);
+          backdrop-filter: blur(0.1rem);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .game-wrapper .game-container .game-left-wrapper .gameover-line {
   position: absolute;
   width: 0;
   height: 3px;
-  background: green;
+  background: #68db68;
   border-radius: 20px;
   transition: 0.3s width ease-in-out;
 }
@@ -45,7 +57,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #acacac;
+  border: 1px solid #fff;
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
@@ -87,10 +99,14 @@
 .game-wrapper .game-container .game-overview {
   padding: 1rem;
 }
+.game-wrapper .game-container .game-overview h1 {
+  color: #fff;
+}
 .game-wrapper .game-container .game-overview p {
   font-weight: 800;
   font-size: 1.5rem;
   margin: 2rem 0;
+  color: #fff;
 }
 .game-wrapper .game-container .game-overview p span {
   font-size: 1.2rem;

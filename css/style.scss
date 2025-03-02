@@ -7,6 +7,12 @@
     font-family: "Comic Neue", cursive;
 }
 
+body{
+    background: url('../assets/bgimage.webp') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 .btn-main{
     padding: 0.8rem 2rem;
     font-size: 1.4rem;
@@ -28,12 +34,17 @@
 
         .game-left-wrapper{            
             position: relative;
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(0.1rem);            
+            border-radius: 10px;   
+            overflow: hidden;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
             .gameover-line{
                 position: absolute;
                 width: 0;
                 height: 3px;
-                background: green;
+                background: #68db68;
                 border-radius: 20px;
                 transition: 0.3s width ease-in-out;
             }
@@ -42,13 +53,13 @@
         .game{
             display: grid;
             grid-template-columns: repeat(3, 10vw);
-            grid-template-rows: repeat(3, 10vw);            
+            grid-template-rows: repeat(3, 10vw);       
 
             .cell{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                border: 1px solid #acacac;
+                border: 1px solid #fff;
                 cursor: pointer;
                 transition: 0.2s ease-in-out;
 
@@ -102,10 +113,15 @@
         .game-overview{
             padding: 1rem;
 
+            h1{
+                color: #fff;
+            }
+
             p{
                 font-weight: 800;
                 font-size: 1.5rem;
                 margin: 2rem 0;
+                color: #fff;
 
                 span{
                     font-size: 1.2rem;
