@@ -17,7 +17,7 @@ const changeTurn = () => {
 
 //Check winner
 const checkWinner = () => {
-    let cellText = document.getElementsByClassName("cell");
+    let cellText = document.getElementsByClassName("cell-text");
 
     let wins = [
         [0, 1, 2],
@@ -50,7 +50,11 @@ Array.from(cells).forEach(element => {
     let cellText = element.querySelector(".cell-text");
 
     element.addEventListener("click", () => {
-        cellText.innerText = turn;
+        if (cellText.innerText === "") {
+            cellText.innerText = turn;
+        } else {
+            return;
+        }
         
         changeTurn();
 
@@ -74,6 +78,10 @@ const reset = () => {
     });
 
     isGameOver = false;
+
+    turn = "X";
+
+    turnIndicator.innerHTML = `<span>Turn for:</span> X`;
 
     gameMusic.pause();
     gameMusic.currentTime = 0;
