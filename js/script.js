@@ -92,5 +92,4 @@ const reset = () => {
 
     gameOverImage[0].style.width = "0";
     document.querySelector(".gameover-line").style.width = `0`;
-    document.querySelector(".gameover-line").style.transform = `translate(0vw, 0vw) rotate(0deg)`;
 };
