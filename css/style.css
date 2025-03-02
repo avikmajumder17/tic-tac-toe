@@ -25,6 +25,17 @@
 .game-wrapper .game-container {
   display: flex;
 }
+.game-wrapper .game-container .game-left-wrapper {
+  position: relative;
+}
+.game-wrapper .game-container .game-left-wrapper .gameover-line {
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background: green;
+  border-radius: 20px;
+  transition: 0.3s width ease-in-out;
+}
 .game-wrapper .game-container .game {
   display: grid;
   grid-template-columns: repeat(3, 10vw);
@@ -112,6 +123,9 @@
   }
   .game-wrapper .game-container .game .cell .cell-text {
     font-size: 15vw;
+  }
+  .game-wrapper .game-container .game-overview img {
+    margin-top: 1rem;
   }
 }
 @media only screen and (max-width: 600px) {
