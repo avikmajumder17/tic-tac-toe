@@ -92,4 +92,30 @@
 .game-wrapper .game-container .game-overview img {
   width: 0;
   transition: 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 800px) {
+  .game-wrapper .game-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .game-wrapper .game-container .game {
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3, 20vw);
+  }
+  .game-overview {
+    margin-top: 2rem;
+    text-align: center;
+  }
+  .game-wrapper .game-container .game-overview .btn-main {
+    margin: auto;
+  }
+  .game-wrapper .game-container .game .cell .cell-text {
+    font-size: 15vw;
+  }
+}
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.6rem;
+  }
 }/*# sourceMappingURL=style.css.map */
